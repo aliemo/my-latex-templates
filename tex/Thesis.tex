@@ -1,0 +1,84 @@
+%% AUT Thesis Template
+%% Amirkabir University of Technology (Tehran Polytechnic)
+%% Version 2020 
+%% This Project is based on http://library.aut.ac.ir/Thesis\%20Guide
+
+%%%  Tested via TeXstudio in TeXlive 2014-2020.
+%%%
+
+%-----------------------------------------------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%   TeXstudio as your IDE
+% 	Use XeLaTex for Default Compiler for XePersian based Templates
+%   Options->Configure TeXstudio ==> Default Compiler = XeLaTeX
+%   F1 & F5 : Build & View
+%   F6      : Compile
+%   F7      : View
+%   --------------
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% !TEX TS-program = XeLaTeX
+% for Master Thesis use msc and for PHD Thesis use phd for auto congigs
+\documentclass[oneside,msc,12pt]{Thesis}
+
+% Read common/commands.tex for called functions and settings
+% Settings for final release your thesis: disable hyperref
+
+\input{common/commands}
+\begin{document}
+\baselineskip=.75cm
+\linespread{1.75}
+
+% Persian Title
+\input{common/fa_title}
+
+% Defense Verify
+\input{common/taid}
+% If you do not want to print the "Dedication", "acknowledgement" and "Thanksgiving" pages in the output, disable the following lines by putting.
+% use % the beginning. 
+\input{common/Chant}
+% Write your acknowledgement in the file below.
+\input{common/acknowledgement}
+% Persian alphabetical (Abjad) numbering for before than first chapter
+\pagenumbering{alph}
+%----------------------------------------------------
+%----------------------------------------------------
+% Table of Contents, Table of Figures, and List of Tables
+\input{common/TOC-TOF-LOT}
+% List of Symbols
+\input{user/list-of-symbols}
+
+% numerical persian page numbering
+\pagenumbering{arabic}
+\pagestyle{style1}
+%----------------------------------------------------
+%----------------------------------------------------
+%% Chapters
+\include{chapters/chapter1}
+\include{chapters/chapter2}
+\include{chapters/chapter3}
+\include{chapters/chapter4}
+\include{chapters/chapter5}
+%----------------------------------------------------
+%----------------------------------------------------
+% appendix
+\chapterfont{\vspace*{-2em}\centering\LARGE}%
+\appendix
+\bibliographystyle{user/plain-fa}
+\bibliography{user/references}
+\include{user/appendix1}
+%----------------------------------------------------
+% dictionary (persian to english and english to persion)
+
+\parindent=0pt
+\include{user/dicfa2en}%
+\include{user/dicen2fa}
+%--------------------------------------------------------------------------
+% indexing
+\pagestyle{style7}
+\printindex
+\pagestyle{style7}
+%----------------------------------------------------
+%----------------------------------------------------
+\include{user/en-abstract}
+\input{common/en_title}
+\end{document}
