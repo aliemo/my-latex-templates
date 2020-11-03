@@ -1,0 +1,268 @@
+
+%%% This file includes commands, common settings
+%%% Commands for AUT-Thesis Xepersion Template
+
+
+% Arithmetic Packages
+\usepackage{amsthm,amssymb,amsmath,amsfonts}
+
+% Page Margin Package
+\usepackage[top=30mm, bottom=30mm, left=25mm, right=30mm]{geometry}
+
+% Images and Figure Package
+\usepackage{graphicx}
+
+% Color Pakcage
+\usepackage{color}
+
+% Lines Vertical Space Library
+\usepackage{setspace}
+\usepackage{titletoc}
+\usepackage{tocloft}
+
+% uncomment bellow for reseting footnotes at each problem
+%\usepackage[perpage]{footmisc}
+
+\usepackage{enumitem}
+%\usepackage{titlesec}
+
+
+% Hyperlink Package
+\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=red]{hyperref}
+\usepackage[nameinlink]{cleveref}%capitalize,,noabbrev
+ \AtBeginDocument{%
+    \crefname{equation}{برابری}{equations}%
+    \crefname{chapter}{فصل}{chapters}%
+    \crefname{section}{بخش}{sections}%
+    \crefname{appendix}{پیوست}{appendices}%
+    \crefname{enumi}{مورد}{items}%
+    \crefname{footnote}{زیرنویس}{footnotes}%
+    \crefname{figure}{شکل}{figures}%
+    \crefname{table}{جدول}{tables}%
+    \crefname{theorem}{قضیه}{theorems}%
+    \crefname{lemma}{لم}{lemmas}%
+    \crefname{corollary}{نتیجه}{corollaries}%
+    \crefname{proposition}{گزاره}{propositions}%
+    \crefname{definition}{تعریف}{definitions}%
+    \crefname{result}{نتیجه}{results}%
+    \crefname{example}{مثال}{examples}%
+    \crefname{remark}{نکته}{remarks}%
+    \crefname{note}{یادداشت}{notes}%
+}
+
+% uncomment clicked pages hyperlink non-colorized
+%\usepackage[pagebackref=false]{hyperref}
+
+% Headers Setting Package
+\usepackage{fancyhdr}
+
+% Indexing Library
+\usepackage[nottoc]{tocbibind}
+% Indexing Library
+\usepackage{makeidx,multicol}
+\setlength{\columnsep}{1.5cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{verbatim}
+\makeindex
+\usepackage{sectsty}
+% XePersion Package
+\usepackage{xepersian}%[extrafootnotefeatures]
+\SepMark{-}
+% Use texlive version 2014 or late
+% Set Main Persion Font
+\settextfont[Scale=1.2]{IRNazli}
+% Set Main Latin Font
+\setlatintextfont{Times New Roman}
+\renewcommand{\labelitemi}{$\bullet$}
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Persian numbers in formula
+\setmathdigitfont[Scale=1.1]{IRNazli}%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% More Font Style
+%\defpersianfont\Zar[Scale=2]{IRZar}
+\defpersianfont\nastaliq[Scale=2]{IranNastaliq}
+\defpersianfont\chapternumber[Scale=3]{IRNazli}
+%\chapterfont{\centering}%
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Renew Label of «اثبات» to «برهان»
+\renewcommand\proofname{\textbf{برهان}}
+% Renew Label of «کتاب‌نامه» to «منابع و مراجع»
+\renewcommand{\bibname}{منابع و مراجع}
+
+
+% Headings for every page of ToC, LoF and Lot
+\setlength{\cftbeforetoctitleskip}{-1.2em}
+\setlength{\cftbeforelottitleskip}{-1.2em}
+\setlength{\cftbeforeloftitleskip}{-1.2em}
+\setlength{\cftaftertoctitleskip}{-1em}
+\setlength{\cftafterlottitleskip}{-1em}
+\setlength{\cftafterloftitleskip}{-1em}
+%%\makeatletter
+%%%%\renewcommand{\l@chapter}{\@dottedtocline{1}{1em\bfseries}{1em}}
+%%%%\renewcommand{\l@section}{\@dottedtocline{2}{2em}{2em}}
+%%%%\renewcommand{\l@subsection}{\@dottedtocline{3}{3em}{3em}}
+%%%%\renewcommand{\l@subsubsection}{\@dottedtocline{4}{4em}{4em}}
+%%%%\makeatother
+
+
+\newcommand\tocheading{\par عنوان\hfill صفحه \par}
+\newcommand\lofheading{\hspace*{.5cm}\figurename\hfill صفحه \par}
+\newcommand\lotheading{\hspace*{.5cm}\tablename\hfill صفحه \par}
+
+\renewcommand{\cftchapleader}{\cftdotfill{\cftdotsep}}
+\renewcommand{\cfttoctitlefont}{\hspace*{\fill}\LARGE\bfseries}%\Large
+\renewcommand{\cftaftertoctitle}{\hspace*{\fill}}
+\renewcommand{\cftlottitlefont}{\hspace*{\fill}\LARGE\bfseries}%\Large
+\renewcommand{\cftafterlottitle}{\hspace*{\fill}}
+\renewcommand{\cftloftitlefont}{\hspace*{\fill}\LARGE\bfseries}
+\renewcommand{\cftafterloftitle}{\hspace*{\fill}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Renew More (3 Level numbering for defs)
+\theoremstyle{definition}
+\newtheorem{definition}{تعریف}[section]
+\newtheorem{remark}[definition]{نکته}
+\newtheorem{note}[definition]{یادداشت}
+\newtheorem{example}[definition]{نمونه}
+\newtheorem{question}[definition]{سوال}
+\newtheorem{remember}[definition]{یاداوری}
+\theoremstyle{theorem}
+\newtheorem{theorem}[definition]{قضیه}
+\newtheorem{lemma}[definition]{لم}
+\newtheorem{proposition}[definition]{گزاره}
+\newtheorem{corollary}[definition]{نتیجه}
+%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%
+% Renew More (4 Level numbering for defs)
+%%\newtheorem{definition1}[subsubsection]{تعریف}
+%%\newtheorem{theorem1}[subsubsection]{قضیه}
+%%\newtheorem{lemma1}[subsubsection]{لم}
+%%\newtheorem{proposition1}[subsubsection]{گزاره}
+%%\newtheorem{corollary1}[subsubsection]{نتیجه}
+%%\newtheorem{remark1}[subsubsection]{نکته}
+%%\newtheorem{example1}[subsubsection]{مثال}
+%%\newtheorem{question1}[subsubsection]{سوال}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands for first Page of Chapters
+\makeatletter
+\newcommand\mycustomraggedright{%
+ \if@RTL\raggedleft%
+ \else\raggedright%
+ \fi}
+\def\@makechapterhead#1{%
+\thispagestyle{style1}
+\vspace*{20\p@}%
+{\parindent \z@ \mycustomraggedright
+\ifnum \c@secnumdepth >\m@ne
+\if@mainmatter
+
+\bfseries{\Huge \@chapapp}\small\space {\chapternumber\thechapter}
+\par\nobreak
+\vskip 0\p@
+\fi
+\fi
+\interlinepenalty\@M 
+\Huge \bfseries #1\par\nobreak
+\vskip 120\p@
+
+}
+
+%\thispagestyle{empty}
+\newpage}
+\bidi@patchcmd{\@makechapterhead}{\thechapter}{\tartibi{chapter}}{}{}
+\bidi@patchcmd{\chaptermark}{\thechapter}{\tartibi{chapter}}{}{}
+\makeatother
+
+\pagestyle{fancy}
+\renewcommand{\chaptermark}[1]{\markboth{\chaptername~\tartibi{chapter}: #1}{}}
+
+\fancypagestyle{style1}{
+\fancyhf{} 
+\fancyfoot[c]{\thepage}
+\fancyhead[R]{\leftmark}%
+\renewcommand{\headrulewidth}{1.2pt}
+}
+
+
+\fancypagestyle{style2}{
+\fancyhf{}
+\fancyhead[R]{چکیده}
+\fancyfoot[C]{\thepage{}}
+\renewcommand{\headrulewidth}{1.2pt}
+}
+
+\fancypagestyle{style3}{%
+  \fancyhf{}%
+  \fancyhead[R]{فهرست نمادها}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+
+\fancypagestyle{style4}{%
+  \fancyhf{}%
+  \fancyhead[R]{فهرست جداول}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+
+\fancypagestyle{style5}{%
+  \fancyhf{}%
+  \fancyhead[R]{فهرست اشکال}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+
+\fancypagestyle{style6}{%
+  \fancyhf{}%
+  \fancyhead[R]{فهرست مطالب}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+
+\fancypagestyle{style7}{%
+  \fancyhf{}%
+  \fancyhead[R]{نمایه}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+
+\fancypagestyle{style8}{%
+  \fancyhf{}%
+  \fancyhead[R]{منابع و مراجع}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+\fancypagestyle{style9}{%
+  \fancyhf{}%
+  \fancyhead[R]{واژه‌نامه‌ی فارسی به انگلیسی}
+  \fancyfoot[C]{\thepage}%
+  \renewcommand{\headrulewidth}{1.2pt}%
+}
+%
+
+% Remove name of figures and tables in table of contents
+
+
+\newcommand*{\BeginNoToc}{%
+  \addtocontents{toc}{%
+    \edef\protect\SavedTocDepth{\protect\the\protect\value{tocdepth}}%
+  }%
+  \addtocontents{toc}{%
+    \protect\setcounter{tocdepth}{-10}%
+  }%
+}
+\newcommand*{\EndNoToc}{%
+  \addtocontents{toc}{%
+    \protect\setcounter{tocdepth}{\protect\SavedTocDepth}%
+  }%
+}
+\newcounter{savepage}
+\renewcommand{\listfigurename}{فهرست اشکال}
+\renewcommand{\listtablename}{فهرست جداول}
+%\renewcommand\cftsecleader{\cftdotfill{\cftdotsep}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
